@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osrsgearsets.gg</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonts (need both) -->
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preload" href="fonts/RuneScape.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/icons/Worn_Equipment.ico" />
+  </head>
+  <body>
+    <div class="page-header">
+      <h1 style="font-family: 'RuneScape'; font-weight: normal;">osrsgearsets.gg</h1>
+      <div class="page-header">
+  <div class="theme-toggle-wrapper">
+    <div>🌓</div><div class="theme-toggle" id="theme-toggle"></div>
+  </div>
+</div>
+    </div>
+
+    <div class="container">
+      <div class="gear-grid">
+        <!-- Head Slot -->
+        <div class="slot" id="head-slot">
+          <input type="text" id="head-search" placeholder="Search head gear..." oninput="filterItems('head', this.value)">
+          <div class="search-results" id="head-results"></div>
+          <img src="images/head-placeholder.png" alt="Head Slot">
+        </div>
+        <!-- Cape Slot -->
+        <div class="slot" id="cape-slot">
+          <input type="text" id="cape-search" placeholder="Search cape gear..." oninput="filterItems('cape', this.value)">
+          <div class="search-results" id="cape-results"></div>
+          <img src="images/cape-placeholder.png" alt="Cape Slot">
+        </div>
+        <!-- Neck Slot -->
+        <div class="slot" id="neck-slot">
+          <input type="text" id="neck-search" placeholder="Search neck gear..." oninput="filterItems('neck', this.value)">
+          <div class="search-results" id="neck-results"></div>
+          <img src="images/neck-placeholder.png" alt="Neck Slot">
+        </div>
+        <!-- Ammo Slot -->
+        <div class="slot" id="ammo-slot">
+          <input type="text" id="ammo-search" placeholder="Search ammo..." oninput="filterItems('ammo', this.value)">
+          <div class="search-results" id="ammo-results"></div>
+          <img src="images/ammo-placeholder.png" alt="Ammo Slot">
+        </div>
+        <!-- Weapon Slot -->
+        <div class="slot" id="weapon-slot">
+          <input type="text" id="weapon-search" placeholder="Search weapon..." oninput="filterItems('weapon', this.value)">
+          <div class="search-results" id="weapon-results"></div>
+          <img src="images/weapon-placeholder.png" alt="Weapon Slot">
+        </div>
+        <!-- Shield Slot -->
+        <div class="slot" id="shield-slot">
+          <input type="text" id="shield-search" placeholder="Search shield..." oninput="filterItems('shield', this.value)">
+          <div class="search-results" id="shield-results"></div>
+          <img src="images/shield-placeholder.png" alt="Shield Slot">
+        </div>
+        <!-- Chest Slot -->
+        <div class="slot" id="chest-slot">
+          <input type="text" id="chest-search" placeholder="Search chest gear..." oninput="filterItems('chest', this.value)">
+          <div class="search-results" id="chest-results"></div>
+          <img src="images/chest-placeholder.png" alt="Chest Slot">
+        </div>
+        <!-- Legs Slot -->
+        <div class="slot" id="legs-slot">
+          <input type="text" id="legs-search" placeholder="Search leg gear..." oninput="filterItems('legs', this.value)">
+          <div class="search-results" id="legs-results"></div>
+          <img src="images/legs-placeholder.png" alt="Legs Slot">
+        </div>
+        <!-- Gloves Slot -->
+        <div class="slot" id="gloves-slot">
+          <input type="text" id="gloves-search" placeholder="Search gloves..." oninput="filterItems('gloves', this.value)">
+          <div class="search-results" id="gloves-results"></div>
+          <img src="images/gloves-placeholder.png" alt="Gloves Slot">
+        </div>
+        <!-- Boots Slot -->
+        <div class="slot" id="boots-slot">
+          <input type="text" id="boots-search" placeholder="Search boots..." oninput="filterItems('boots', this.value)">
+          <div class="search-results" id="boots-results"></div>
+          <img src="images/boots-placeholder.png" alt="Boots Slot">
+        </div>
+        <!-- Ring Slot -->
+        <div class="slot" id="ring-slot">
+          <input type="text" id="ring-search" placeholder="Search ring..." oninput="filterItems('ring', this.value)">
+          <div class="search-results" id="ring-results"></div>
+          <img src="images/ring-placeholder.png" alt="Ring Slot">
+        </div>
+      </div>
+
+      <!-- Stats Panel -->
+      <div class="stats-panel">
+        <h3>Stats</h3>
+        <!-- Attack Stats -->
+        <button class="collapsible">
+          <img src="images/icons/Attack_icon.png" alt="Attack Icon" class="bonus-icon"> Attack Stats <span class="caret">&#9654;</span>
+        </button>
+        <div class="content">
+          <p><img src="images/icons/attack-stab.png" alt="Attack Stab" class="bonus-icon"> Attack Stab: <span id="attack-stab">0</span></p>
+          <p><img src="images/icons/attack-slash.png" alt="Attack Slash" class="bonus-icon"> Attack Slash: <span id="attack-slash">0</span></p>
+          <p><img src="images/icons/attack-crush.png" alt="Attack Crush" class="bonus-icon"> Attack Crush: <span id="attack-crush">0</span></p>
+          <p><img src="images/icons/attack-magic.png" alt="Attack Magic" class="bonus-icon"> Attack Magic: <span id="attack-magic">0</span></p>
+          <p><img src="images/icons/attack-ranged.png" alt="Attack Ranged" class="bonus-icon"> Attack Ranged: <span id="attack-ranged">0</span></p>
+        </div>
+
+        <!-- Defense Stats -->
+        <button class="collapsible">
+          <img src="images/icons/Defence_icon.png" alt="Defense Icon" class="bonus-icon"> Defense Stats <span class="caret">&#9654;</span>
+        </button>
+        <div class="content">
+          <p><img src="images/icons/defense-stab.png" alt="Defense Stab" class="bonus-icon"> Defense Stab: <span id="defense-stab">0</span></p>
+          <p><img src="images/icons/defense-slash.png" alt="Defense Slash" class="bonus-icon"> Defense Slash: <span id="defense-slash">0</span></p>
+          <p><img src="images/icons/defense-crush.png" alt="Defense Crush" class="bonus-icon"> Defense Crush: <span id="defense-crush">0</span></p>
+          <p><img src="images/icons/defense-magic.png" alt="Defense Magic" class="bonus-icon"> Defense Magic: <span id="defense-magic">0</span></p>
+          <p><img src="images/icons/defense-ranged.png" alt="Defense Ranged" class="bonus-icon"> Defense Ranged: <span id="defense-ranged">0</span></p>
+        </div>
+
+        <!-- Additional Stats -->
+        <p><img src="images/icons/strength.png" alt="Strength Icon" class="bonus-icon"> Strength: <span id="strength">0</span></p>
+        <p><img src="images/icons/ranged-strength.png" alt="Ranged Strength Icon" class="bonus-icon"> Ranged Strength: <span id="ranged-strength">0</span></p>
+        <p><img src="images/icons/magic-damage.png" alt="Magic Damage Icon" class="bonus-icon"> Magic Damage: <span id="magic-damage">0</span></p>
+        <p><img src="images/icons/prayer.png" alt="Prayer Icon" class="bonus-icon"> Prayer: <span id="prayer">0</span></p>
+
+        <!-- Total Cost -->
+        <div id="total-cost">
+          <img src="images/icons/gp.png" alt="GP Icon" class="bonus-icon">
+          <strong>Total Cost:</strong> <span class="total-cost-color">0 GP</span>
+        </div>
+
+        <button onclick="generateShareableURL()">Share Loadout 🚀</button>
+      </div>
+    </div>
+
+     <!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <p><!--&copy;-->⚔️: osrsgearsets.gg | ⚙️: Made with ❤️ by Sylvos | 📅: 2024</p>
+        <!--
+        <p>
+            <a href="https://oldschool.runescape.wiki/" target="_blank">Old School RuneScape Wiki</a> |
+            <a href="https://runescape.wiki/w/Grand_Exchange" target="_blank">Grand Exchange</a>
+        </p>
+        -->
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

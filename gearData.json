@@ -1,0 +1,200 @@
+{
+  "head": [
+    {
+      "id": 11761,
+      "name": "Helm of Neitiznot",
+      "attack": {
+        "stab": 3,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 31,
+        "slash": 29,
+        "crush": 30
+      },
+      "strength": 3,
+      "prayer": 1
+    }
+  ],
+  "cape": [
+    {
+      "id": 10499,
+      "name": "Ava's Accumulator",
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "strength": 0,
+      "prayer": 0
+    }
+  ],
+  "neck": [
+    {
+      "id": 19547,
+      "name": "Amulet of Fury",
+      "attack": {
+        "stab": 10,
+        "slash": 8,
+        "crush": 8
+      },
+      "defense": {
+        "stab": 15,
+        "slash": 15,
+        "crush": 15
+      },
+      "strength": 8,
+      "prayer": 5
+    }
+  ],
+  "ammo": [
+    {
+      "id": 11212,
+      "name": "Dragonstone Bolts (e)",
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "strength": 0,
+      "prayer": 0
+    }
+  ],
+  "weapon": [
+    {
+      "id": 4151,
+      "name": "Abyssal Whip",
+      "attack": {
+        "stab": 0,
+        "slash": 82,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "strength": 0,
+      "prayer": 0
+    }
+  ],
+  "shield": [
+    {
+      "id": 11283,
+      "name": "Dragonfire Shield",
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 70,
+        "slash": 75,
+        "crush": 72
+      },
+      "strength": 7,
+      "prayer": 0
+    }
+  ],
+  "chest": [
+    {
+      "id": 11832,
+      "name": "Bandos Chestplate",
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 103,
+        "slash": 106,
+        "crush": 101
+      },
+      "strength": 4,
+      "prayer": 1
+    }
+  ],
+  "legs": [
+    {
+      "id": 11834,
+      "name": "Bandos Tassets",
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 83,
+        "slash": 81,
+        "crush": 80
+      },
+      "strength": 2,
+      "prayer": 0
+    }
+  ],
+  "gloves": [
+    {
+      "id": 7462,
+      "name": "Barrows Gloves",
+      "attack": {
+        "stab": 12,
+        "slash": 12,
+        "crush": 12
+      },
+      "defense": {
+        "stab": 12,
+        "slash": 12,
+        "crush": 12
+      },
+      "strength": 12,
+      "prayer": 0
+    }
+  ],
+  "boots": [
+    {
+      "id": 11840,
+      "name": "Dragon Boots",
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 16,
+        "slash": 17,
+        "crush": 18
+      },
+      "strength": 4,
+      "prayer": 0
+    }
+  ],
+  "ring": [
+    {
+      "id": 6737,
+      "name": "Berserker Ring",
+      "attack": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "defense": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0
+      },
+      "strength": 4,
+      "prayer": 0
+    }
+  ]
+}

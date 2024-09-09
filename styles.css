@@ -1,0 +1,357 @@
+:root {
+    /* Dark theme variables (default) */
+    --background-color: #111;
+    --text-color: #fff;
+    --border-color: #555;
+    --slot-background: #333;
+    --search-background: #222;
+    --button-background: #444;
+    --total-cost-color: #23fa92;
+}
+
+/* Brown theme */
+body.brown-theme {
+    --background-color: #5b4636;
+    --text-color: #f4e5bc;
+    --border-color: #a78960;
+    --slot-background: #7a614a;
+    --search-background: #6b523c;
+    --button-background: #8a704f;
+    /*--total-cost-color: #f4e5bc;*/
+    --total-cost-color: #23fa92;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Container for main content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+/* Gear grid (picker) stays normal size */
+.gear-grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-gap: 10px;
+    background-color: var(--slot-background);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+}
+
+/* Individual slot styling */
+.slot {
+    background-color: var(--slot-background);
+    border: 2px solid var(--border-color);
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.slot img {
+    max-width: 80px;
+}
+
+/* Grid positions for each equipment slot */
+#head-slot {
+    grid-area: 1 / 2;
+    /* row 1, column 2 */
+}
+
+#cape-slot {
+    grid-area: 2 / 1;
+    /* row 2, column 1 */
+}
+
+#neck-slot {
+    grid-area: 2 / 2;
+    /* row 2, column 2 */
+}
+
+#ammo-slot {
+    grid-area: 2 / 3;
+    /* row 2, column 3 */
+}
+
+#weapon-slot {
+    grid-area: 3 / 1;
+    /* row 3, column 1 */
+}
+
+#shield-slot {
+    grid-area: 3 / 3;
+    /* row 3, column 3 */
+}
+
+#chest-slot {
+    grid-area: 3 / 2;
+    /* row 3, column 2 */
+}
+
+#legs-slot {
+    grid-area: 4 / 2;
+    /* row 4, column 2 */
+}
+
+#gloves-slot {
+    grid-area: 4 / 1;
+    /* row 4, column 1 */
+}
+
+#boots-slot {
+    grid-area: 5 / 2;
+    /* row 5, column 2 */
+}
+
+#ring-slot {
+    grid-area: 4 / 3;
+    /* row 4, column 3 */
+}
+
+/* Stats panel for the sidebar */
+.stats-panel {
+    margin-left: 30px;
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    height: auto;
+}
+
+/* Compact footer styling */
+.site-footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+}
+
+/* General body styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+/* Input and other element styles */
+input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: var(--search-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+/* Item and search result styles */
+.search-results {
+    position: absolute;
+    background-color: var(--slot-background);
+    border: 1px solid var(--border-color);
+    max-height: 200px;
+    overflow-y: auto;
+    width: 95%;
+    z-index: 1000;
+    display: none;
+    padding: 5px;
+}
+
+.search-results div {
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-results div:hover {
+    background-color: #444;
+}
+
+/* Item image styling */
+.item-image {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    object-fit: contain;
+}
+
+.item-name {
+    font-size: 11px;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.item-price {
+    font-size: 11px;
+    color: var(--total-cost-color);
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    height: 90px;
+    position: relative;
+}
+
+.remove-item-x {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: #222;
+    color: white;
+    padding: 1px 3px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.remove-item-x:hover {
+    background-color: darkred;
+}
+
+button {
+    background-color: var(--button-background);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Collapsible panel styling */
+.collapsible {
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible.active {
+    background-color: transparent;
+}
+
+.caret {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.content {
+    padding: 10px;
+    display: none;
+    background-color: transparent;
+    border-radius: 4px;
+    margin-top: 5px;
+    border: 2px solid var(--border-color);
+}
+
+/* Title and page header styling */
+.page-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-title {
+    font-size: 2.5em;
+    color: var(--text-color);
+    font-family: 'Runescape';
+}
+
+.bonus-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.total-cost-color {
+    color: var(--total-cost-color);
+}
+
+/* Toggle switch styling */
+.theme-toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    border-radius: 30px;
+    background-color: var(--button-background);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+}
+
+.theme-toggle:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle.active:before {
+    transform: translateX(26px);
+    /* Move to the right when active */
+}
+
+.theme-toggle:hover {
+    background-color: #666;
+    /* Darken on hover */
+}
